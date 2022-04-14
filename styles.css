@@ -10,10 +10,6 @@
   font-family: spotify-light;
   src: url(fonts/CircularSpotify-UI-Latin-OS2v3-Book.woff2);
 }
-@font-face {
-  font-family: spotify;
-  src: url(fonts/CircularStd-Book.otf);
-}
 
 * {
   margin: 0;
@@ -67,8 +63,14 @@ button {
   border-radius: 50px;
   border: 0;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 700;
-  font-family: spotify;
+  font-family: spotify-medium;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.04);
 }
 
 .font-light {
@@ -225,6 +227,15 @@ button {
   padding: 26px 28px;
 }
 
+.questionsDiv:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.questionsDiv:hover .question {
+  text-decoration: underline;
+}
+
 .active {
   background-color: #f0f0f0;
 }
@@ -346,6 +357,11 @@ button {
     font-family: spotify-medium;
   }
 
+  .navItems:hover {
+    color: #1ed760;
+    cursor: pointer;
+  }
+
   .lastItem {
     padding: 28px 0 28px 17px;
   }
@@ -356,13 +372,16 @@ button {
     font-weight: 400;
   }
 
+  .line:hover {
+    color: #fff !important;
+  }
+
   .heroSection {
     padding: 0px;
     height: 600px;
   }
 
-  .heroContent{
-    max-width: 653px;
+  .heroContent {
     letter-spacing: -0.64px;
   }
 
@@ -445,5 +464,10 @@ button {
   .featureInfo {
     width: 238px;
     margin: 0 auto;
+  }
+
+  .faqSection {
+    margin: 0 auto;
+    max-width: 1170px;
   }
 }
