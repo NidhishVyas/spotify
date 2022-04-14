@@ -1,14 +1,14 @@
 @font-face {
   font-family: spotify-bold;
-  src: url(fonts/CircularStd-Bold.otf);
+  src: url(fonts/CircularSpotify-UI-Latin-OS2v3-Bold.woff2);
 }
 @font-face {
   font-family: spotify-medium;
-  src: url(fonts/CircularStd-Medium.otf);
+  src: url(fonts/CircularSpotify-UI-Latin-OS2v3-Black.woff2);
 }
 @font-face {
   font-family: spotify-light;
-  src: url(fonts/CircularStd-Light.otf);
+  src: url(fonts/CircularSpotify-UI-Latin-OS2v3-Book.woff2);
 }
 @font-face {
   font-family: spotify;
@@ -44,12 +44,21 @@ img {
 }
 
 nav {
-  height: 54px;
   background-color: #000;
+}
+
+.navBar {
+  height: 54px;
+  max-width: 750px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
+}
+
+.navList {
+  display: none;
 }
 
 button {
@@ -105,6 +114,10 @@ button {
   color: #fff;
   font-size: 48px;
   margin-bottom: 32px;
+}
+
+.phoneDiv {
+  display: none;
 }
 
 /******** FEATURE SECTION ********/
@@ -238,6 +251,10 @@ button {
   background-position: center center;
   background-repeat: no-repeat;
   padding: 112px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -251,6 +268,7 @@ button {
   .heroSection {
     background: url(/assets/bubbles-dktp.svg) center -138px / 100% 1068px no-repeat,
       linear-gradient(-45deg, rgb(108, 14, 224) -5%, rgb(240, 55, 166));
+    min-height: 450px;
   }
 
   .heroContent {
@@ -286,7 +304,7 @@ button {
     display: none;
   }
 
-  .freeContent{
+  .freeContent {
     font-size: 40px;
   }
 
@@ -299,7 +317,133 @@ button {
   }
 }
 
-@media (min-width: 768px) {
-  
+@media (min-width: 992px) {
+  .navBar {
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 970px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .logo {
+    height: 40px;
+    width: 132px;
+  }
+
+  .navList {
+    display: flex;
+  }
+
+  .navItems {
+    color: #fff;
+    font-size: 16px;
+    padding: 28px 17px;
+    line-height: 24px;
+    font-family: spotify-medium;
+  }
+
+  .lastItem {
+    padding: 28px 0 28px 17px;
+  }
+
+  .line {
+    font-family: none;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .heroSection {
+    padding: 0px;
+    height: 600px;
+  }
+
+  .heroContent{
+    max-width: 653px;
+    letter-spacing: -0.64px;
+  }
+
+  .heroWidth {
+    max-width: 1170px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .phoneDiv {
+    display: block;
+    width: 40%;
+  }
+
+  .phoneImg {
+    padding-top: 104px;
+    margin: 0 auto;
+    display: block;
+    width: 281px;
+    height: auto;
+  }
+
+  .heroDiv {
+    padding: 180px 15px 0px 0px;
+    width: 60%;
+  }
+
+  .featureDiv {
+    max-width: 940px;
+  }
+
+  .feature {
+    max-width: 100%;
+    width: 50%;
+  }
+
+  .freeInfo {
+    padding: 190px 15px;
+  }
+
+  .freeContent {
+    font-size: 48px;
+  }
+
+  .readySection {
+    height: 450px;
+    padding: 0;
+  }
+
+  .readyContent {
+    font-size: 80px;
+  }
 }
 
+@media (min-width: 1200px) {
+  .navBar {
+    max-width: 1170px;
+  }
+
+  .feature {
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    height: 307px;
+  }
+
+  .featureDiv {
+    max-width: 100%;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .featureImg {
+    margin: 0 auto 40px;
+    width: 142px;
+    max-width: 100%;
+  }
+
+  .featureInfo {
+    width: 238px;
+    margin: 0 auto;
+  }
+}
